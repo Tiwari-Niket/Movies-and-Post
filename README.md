@@ -1,6 +1,10 @@
-# DayThree
+# Movies And Post 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3 and I have used movie and post free api.
+
+## DEscription
+
+You will learn multiple concept in this project such as pagination, fetching any api, how to handle image error (when our image not loads, we will replace that with other image).
 
 ## Development server
 
