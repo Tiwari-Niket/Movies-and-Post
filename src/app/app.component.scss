@@ -1,0 +1,66 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    background-color: #ffffff;
+    width: 250px;
+  }
+  
+  .side-nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .active-route {
+    background: #e0e0fc;
+  }
+  
+  .page-content {
+    position: relative;
+    padding: 0 1rem 1rem 1rem;
+  }
+  
+  .toolbar {
+    position: sticky;
+    top: 0;
+    color: #1a1b1f;
+    --mat-toolbar-container-background-color: transparent;
+    z-index: 200;
+    backdrop-filter: blur(8px);
+    background-color: rgba(239, 237, 241, 0.8);
+  }
+  
+  .sidebar-menu {
+    margin-bottom: 20px;
+    .side-nav-menu-item {
+      ::ng-deep.mat-list-item-content {
+        padding: 0 13px;
+      }
+      .side-nav-menu-item-container {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        .side-nav-menu-icon {
+          width: 24px;
+          min-width: 24px;
+          max-width: 24px;
+          height: 24px;
+        }
+        .side-nav-menu-text {
+          margin-bottom: 0px;
+          color: #1a202c;
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+   

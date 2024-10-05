@@ -1,0 +1,54 @@
+@if(!isLoading){
+<ng-container>
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia">
+  </mat-form-field>
+
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+
+      <!-- UserId Column -->
+      <ng-container matColumnDef="userId">
+        <th mat-header-cell *matHeaderCellDef> UserId </th>
+        <td mat-cell *matCellDef="let row"> {{row.userId}} </td>
+      </ng-container>
+
+      <!-- Title Column -->
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Title </th>
+        <td mat-cell *matCellDef="let row"> {{row.title}} </td>
+      </ng-container>
+
+      <!-- Body Column -->
+      <ng-container matColumnDef="body">
+        <th mat-header-cell *matHeaderCellDef> Body </th>
+        <td mat-cell *matCellDef="let row"> {{row.body}} </td>
+      </ng-container>
+
+      <!-- Table Header and Row Definitions -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <!-- No Data Row -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter</td>
+      </tr>
+    </table>
+
+    <!-- Pagination Controls -->
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]"></mat-paginator>
+  </div>
+</ng-container>
+}
+@if(isLoading){
+<ng-container>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-container>
+}
